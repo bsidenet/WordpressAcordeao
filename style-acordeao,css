@@ -146,7 +146,23 @@
     .portfolio-category { max-width: 40%; }
     .portfolio-year { max-width: 20%; text-align: right; }
 
-    .portfolio-description {
+	
+	/* Ajuste individual dos títulos */
+	.portfolio-header-bar .portfolio-title {
+		max-width: 40%;
+	}
+	.portfolio-header-bar .portfolio-category {
+		max-width: 40%;
+	}
+	.portfolio-header-bar .portfolio-excerpt {
+        display: none;
+	}
+	.portfolio-header-bar .portfolio-year {
+		max-width: 20%;
+		text-align: right;
+	}
+
+    .portfolio-excerpt {
         display: none;
     }
 
