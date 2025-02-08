@@ -1,7 +1,7 @@
 // Efeito Acordeão
 
 function portfolio_list_shortcode() {
-    $args = array(
+	$args = array(
         'post_type' => 'post',
         'category_name' => 'portfolio',
         'posts_per_page' => -1,
