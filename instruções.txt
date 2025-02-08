@@ -1,0 +1,4 @@
+- No Elementor, adicionar o selector "menu-container" no campo "Classes CSS" do container do menu.
+- Adicionar o código CSS com um plugin de customização de código, como por exempo o Simple Custom CSS and JS
+- Adicionar o código JavaScript com um plugin de customização de código, como por exempo o Simple Custom CSS and JS
+- Adicionar ao ficheiro "functions.php" do tema activo o código do ficheiro script-functions.php
