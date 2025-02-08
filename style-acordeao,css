@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     position: sticky;
-    top: 80px;
+    top: 0;
     z-index: 999;
     background-color: #000; /* Fundo sempre preto */
     color: white; /* Texto sempre branco */
