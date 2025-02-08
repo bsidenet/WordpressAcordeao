@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+	const menu = document.querySelector(".menu-container"); // Substitui pelo seletor real do menu
     const portfolioItems = document.querySelectorAll(".portfolio-item");
+    const portfolioHeader = document.querySelector(".portfolio-header-bar");
+	
+	function updateHeaderPosition() {
+        if (menu && portfolioHeader) {
+            const menuHeight = menu.offsetHeight; // Obtém a altura do menu
+            portfolioHeader.style.top = menuHeight + "px"; // Define a posição correta
+        }
+    }
 
+    // Atualiza no carregamento e ao redimensionar a janela
+    updateHeaderPosition();
+    window.addEventListener("resize", updateHeaderPosition);
+	
+	
     portfolioItems.forEach((item) => {
         const details = item.querySelector(".portfolio-details");
 
