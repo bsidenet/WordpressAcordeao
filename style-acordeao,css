@@ -1,25 +1,25 @@
 /* Barra de título da listagem */
 .portfolio-header-bar {
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: #000; /* Fundo sempre preto */
-    color: white; /* Texto sempre branco */
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	background-color: #000; /* Fundo sempre preto */
+	color: white; /* Texto sempre branco */
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	padding: 10px 0;
 }
 
 /* Estilos dos títulos dentro da barra */
 .portfolio-header-bar span {
-    flex: 1;
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 0;
+	flex: 1;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0;
 }
 
 /* Ajuste individual dos títulos */
@@ -42,56 +42,56 @@
 
 /* Lista de itens do portfólio */
 .portfolio-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
 }
 
 /* Estilo dos itens individuais */
 .portfolio-item {
-    cursor: pointer;
-    background-color: #000; /* Fundo sempre preto */
-    color: white; /* Texto sempre branco */
-    transition: background 0.3s ease-in-out; /* Somente transição no fundo */
+	cursor: pointer;
+	background-color: #000; /* Fundo sempre preto */
+	color: white; /* Texto sempre branco */
+	transition: background 0.3s ease-in-out; /* Somente transição no fundo */
 }
 
 /* Hover e estado ativo */
 .portfolio-item:hover,
 .portfolio-item.active {
-    background-color: #000; /* Leve alteração no fundo ao passar o rato */
+	background-color: #000; /* Leve alteração no fundo ao passar o rato */
 }
 
 /* Estrutura interna de cada item */
 .portfolio-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 0; /* Mantém a altura consistente */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 0; /* Mantém a altura consistente */
 }
 
 /* Ajuste dos elementos dentro de cada item */
 .portfolio-title,
 .portfolio-category,
 .portfolio-excerpt {
-    flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    text-align: left;
-    background-color: #000; /* Fundo preto para manter consistência */
+	flex: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	text-align: left;
+	background-color: #000; /* Fundo preto para manter consistência */
 }
 
 .portfolio-year {
-    flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    text-align: right;
+	flex: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	text-align: right;
 }
 
 /* Ajuste individual */
@@ -113,94 +113,94 @@
 
 /* Esconder detalhes por padrão */
 .portfolio-details {
-    max-height: 0;
-    overflow: hidden;
-    background: #000; /* Fundo sempre preto */
-    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+	max-height: 0;
+	overflow: hidden;
+	background: #000; /* Fundo sempre preto */
+	transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 /* Quando ativo, os detalhes expandem */
 .portfolio-item.active .portfolio-details {
-    max-height: 1000px; /* Um valor grande para acomodar qualquer conteúdo */
-    opacity: 1;
+	max-height: 1000px; /* Um valor grande para acomodar qualquer conteúdo */
+	opacity: 1;
 }
 
 /* Conteúdo detalhado */
 .portfolio-detail-content {
-    padding: 10px 0;
-    display: flex;
-    gap: 30px;
+	padding: 10px 0;
+	display: flex;
+	gap: 30px;
 }
 
 /* Imagem do portfólio */
 .portfolio-image {
-    flex: 1;
-    max-width: 40%;
+	flex: 1;
+	max-width: 40%;
 }
 
 .portfolio-image img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 /* Texto ao lado da imagem */
 .portfolio-text {
-    flex: 2;
-    padding: 10px;
+	flex: 2;
+	padding: 10px;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .portfolio-header {
-        justify-content: space-between;
-    }
+	.portfolio-header {
+		justify-content: space-between;
+	}
 
-    .portfolio-title {
+	.portfolio-title {
 		max-width: 40%;
 	}
-	
-    .portfolio-category {
+
+	.portfolio-category {
 		max-width: 40%;
 	}
-	
-    .portfolio-year {
+
+	.portfolio-year {
 		max-width: 20%;
 		text-align: right;
 	}
-	
+
 	/* Ajuste individual dos títulos */
 	.portfolio-header-bar .portfolio-title {
 		max-width: 40%;
 	}
-	
+
 	.portfolio-header-bar .portfolio-category {
 		max-width: 40%;
 	}
-	
+
 	.portfolio-header-bar .portfolio-excerpt {
-        display: none;
+		display: none;
 	}
-	
+
 	.portfolio-header-bar .portfolio-year {
 		max-width: 20%;
 		text-align: right;
 	}
 
-    .portfolio-excerpt {
-        display: none;
-    }
+	.portfolio-excerpt {
+		display: none;
+	}
 
-    .portfolio-detail-content {
-        flex-direction: column;
-        align-items: center;
-    }
+	.portfolio-detail-content {
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .portfolio-image {
+	.portfolio-image {
 		max-width: 100%;
 	}
-	
-    .portfolio-text {
+
+	.portfolio-text {
 		padding: 10px;
 	}
 }
