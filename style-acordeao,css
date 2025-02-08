@@ -26,12 +26,15 @@
 .portfolio-header-bar .portfolio-title {
 	max-width: 20%;
 }
+
 .portfolio-header-bar .portfolio-category {
 	max-width: 20%;
 }
+
 .portfolio-header-bar .portfolio-excerpt {
 	max-width: 50%;
 }
+
 .portfolio-header-bar .portfolio-year {
 	max-width: 10%;
 	text-align: right;
@@ -92,10 +95,21 @@
 }
 
 /* Ajuste individual */
-.portfolio-title { max-width: 20%; }
-.portfolio-category { max-width: 20%; }
-.portfolio-excerpt { max-width: 50%; }
-.portfolio-year { max-width: 10%; }
+.portfolio-title {
+	max-width: 20%;
+}
+
+.portfolio-category {
+	max-width: 20%;
+}
+
+.portfolio-excerpt {
+	max-width: 50%;
+}
+
+.portfolio-year {
+	max-width: 10%;
+}
 
 /* Esconder detalhes por padrão */
 .portfolio-details {
@@ -142,21 +156,32 @@
         justify-content: space-between;
     }
 
-    .portfolio-title { max-width: 40%; }
-    .portfolio-category { max-width: 40%; }
-    .portfolio-year { max-width: 20%; text-align: right; }
-
+    .portfolio-title {
+		max-width: 40%;
+	}
+	
+    .portfolio-category {
+		max-width: 40%;
+	}
+	
+    .portfolio-year {
+		max-width: 20%;
+		text-align: right;
+	}
 	
 	/* Ajuste individual dos títulos */
 	.portfolio-header-bar .portfolio-title {
 		max-width: 40%;
 	}
+	
 	.portfolio-header-bar .portfolio-category {
 		max-width: 40%;
 	}
+	
 	.portfolio-header-bar .portfolio-excerpt {
         display: none;
 	}
+	
 	.portfolio-header-bar .portfolio-year {
 		max-width: 20%;
 		text-align: right;
@@ -171,6 +196,11 @@
         align-items: center;
     }
 
-    .portfolio-image { max-width: 100%; }
-    .portfolio-text { padding: 10px; }
+    .portfolio-image {
+		max-width: 100%;
+	}
+	
+    .portfolio-text {
+		padding: 10px;
+	}
 }
