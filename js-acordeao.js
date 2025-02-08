@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const menu = document.querySelector(".menu-container"); // Substitui pelo seletor real do menu
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
-    const portfolioHeader = document.querySelector(".portfolio-header-bar");
+	const portfolioItems = document.querySelectorAll(".portfolio-item");
+	const portfolioHeader = document.querySelector(".portfolio-header-bar");
 	
 	function updateHeaderPosition() {
         if (menu && portfolioHeader) {
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 // Alterna o estado do item clicado
-                details.style.maxHeight = isVisible ? "0" : "500px";
-                details.style.padding = isVisible ? "0" : "10px";
+                details.style.maxHeight = isVisible ? "0" : "1500px";
+                details.style.padding = isVisible ? "0" : "0";
             });
         }
     });
