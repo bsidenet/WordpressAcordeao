@@ -1,206 +1,212 @@
-/* Barra de título da listagem */
+/* Portfólio - Efeito Acordeão */
+/* Barra de título */
 .portfolio-header-bar {
-	display: flex; /* Define um contêiner flexível */
-	justify-content: space-between; /* Distribui o espaço igualmente entre os elementos */
-	position: sticky; /* Mantém o elemento fixo no topo durante o scroll */
-	top: 0; /* Define a posição superior como 0 */
-	z-index: 999; /* Define a ordem de empilhamento */
-	background-color: #000; /* Fundo sempre preto */
-	color: white; /* Texto sempre branco */
-	text-transform: uppercase; /* Transforma o texto em maiúsculas */
-	margin-bottom: 10px; /* Margem inferior de 10px */
-	padding: 10px 0; /* Preenchimento superior e inferior de 10px */
+    display: flex; /* Utiliza flexbox para alinhar os itens */
+    justify-content: space-between; /* Distribui os itens igualmente entre as extremidades */
+    position: sticky; /* A barra fica fixa ao topo da página */
+    top: 0; /* Fixa a barra ao topo */
+    z-index: 999; /* Garante que a barra fique acima de outros elementos */
+    background-color: #000; /* Cor de fundo preta */
+    color: white; /* Cor do texto branca */
+    text-transform: uppercase; /* Transforma o texto para maiúsculas */
+    margin-bottom: 10px; /* Espaço abaixo da barra */
+    padding: 10px 0; /* Espaçamento interno (topo e fundo) */
 }
 
-/* Estilos dos títulos dentro da barra */
+/* Estilos dos títulos na barra */
 .portfolio-header-bar span {
-	flex: 1; /* Permite que o elemento cresça igualmente */
-	text-align: left; /* Alinha o texto à esquerda */
-	white-space: nowrap; /* Impede quebra de linha */
-	overflow: hidden; /* Esconde o conteúdo que ultrapassa o limite */
-	text-overflow: ellipsis; /* Adiciona reticências ao texto que ultrapassa o limite */
-	padding: 0; /* Remove o preenchimento */
+    flex: 1; /* Cada título ocupa uma fração igual do espaço */
+    text-align: left; /* Alinha o texto à esquerda */
+    white-space: nowrap; /* Impede que o texto quebre para a linha seguinte */
+    overflow: hidden; /* Oculta qualquer texto que ultrapasse o limite */
+    text-overflow: ellipsis; /* Adiciona reticências ao texto que não cabe */
+    padding: 0; /* Remove o preenchimento */
 }
 
-/* Ajuste individual dos títulos */
+/* Ajuste de largura individual dos itens */
 .portfolio-header-bar .portfolio-title {
-	max-width: 20%; /* Define a largura máxima como 20% */
+	max-width: 25%; /* Limita a largura do título do portfólio */
 }
-
 .portfolio-header-bar .portfolio-category {
-	max-width: 20%; /* Define a largura máxima como 20% */
+	max-width: 22%; /* Limita a largura da categoria */
 }
-
 .portfolio-header-bar .portfolio-excerpt {
-	max-width: 50%; /* Define a largura máxima como 50% */
+	max-width: 43%; /* Limita a largura da descrição breve */
+}
+.portfolio-header-bar .portfolio-year { 
+    max-width: 10%; /* Limita a largura do ano */
+    text-align: right; /* Alinha o ano à direita */
+    padding-right: 30px; /* Espaço à direita */
 }
 
-.portfolio-header-bar .portfolio-year {
-	max-width: 10%; /* Define a largura máxima como 10% */
-	text-align: right; /* Alinha o texto à direita */
-}
-
-/* Lista de itens do portfólio */
+/* Lista de itens */
 .portfolio-list {
-	display: flex; /* Define um contêiner flexível */
-	flex-direction: column; /* Organiza os elementos em coluna */
-	gap: 10px; /* Define um espaço de 10px entre os elementos */
-	margin: 0; /* Remove a margem */
-	padding: 0; /* Remove o preenchimento */
+    display: flex; /* Utiliza flexbox para organizar os itens */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin: 0; /* Remove a margem externa */
+    padding: 0; /* Remove o preenchimento */
 }
 
-/* Estilo dos itens individuais */
+/* Itens do portfólio */
 .portfolio-item {
-	cursor: pointer; /* Altera o cursor para indicar que o elemento é clicável */
-	background-color: #000; /* Fundo sempre preto */
-	color: white; /* Texto sempre branco */
-	transition: background 0.3s ease-in-out; /* Transição suave do fundo */
+    cursor: pointer; /* Altera o cursor para indicar que o item é clicável */
+    background-color: #000; /* Cor de fundo preta */
+    color: white; /* Cor do texto branca */
+    transition: background 0.3s ease-in-out; /* Transição suave ao passar o mouse */
 }
 
 /* Hover e estado ativo */
 .portfolio-item:hover,
 .portfolio-item.active {
-	background-color: #000; /* Leve alteração no fundo ao passar o rato */
+    background-color: #000; /* Cor de fundo não muda no hover ou ativo */
 }
 
 /* Estrutura interna de cada item */
 .portfolio-header {
-	display: flex; /* Define um contêiner flexível */
-	flex-wrap: wrap; /* Permite que os elementos quebrem a linha quando necessário */
-	justify-content: space-between; /* Distribui o espaço igualmente entre os elementos */
-	align-items: center; /* Alinha os elementos verticalmente ao centro */
-	padding: 5px 0; /* Preenchimento superior e inferior de 5px */
+    display: flex; /* Utiliza flexbox para organizar os elementos dentro do item */
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a linha seguinte se necessário */
+    justify-content: space-between; /* Distribui os elementos igualmente */
+    align-items: center; /* Alinha os elementos verticalmente ao centro */
+    padding: 5px 0; /* Espaçamento interno (topo e fundo) */
 }
 
 /* Ajuste dos elementos dentro de cada item */
 .portfolio-title,
 .portfolio-category,
-.portfolio-excerpt {
-	flex: 1; /* Permite que o elemento cresça igualmente */
-	white-space: nowrap; /* Impede quebra de linha */
-	overflow: hidden; /* Esconde o conteúdo que ultrapassa o limite */
-	text-overflow: ellipsis; /* Adiciona reticências ao texto que ultrapassa o limite */
-	text-transform: uppercase; /* Transforma o texto em maiúsculas */
-	text-align: left; /* Alinha o texto à esquerda */
-	background-color: #000; /* Fundo preto para manter consistência */
-}
-
+.portfolio-excerpt,
 .portfolio-year {
-	flex: 1; /* Permite que o elemento cresça igualmente */
-	white-space: nowrap; /* Impede quebra de linha */
-	overflow: hidden; /* Esconde o conteúdo que ultrapassa o limite */
-	text-overflow: ellipsis; /* Adiciona reticências ao texto que ultrapassa o limite */
-	text-transform: uppercase; /* Transforma o texto em maiúsculas */
-	text-align: right; /* Alinha o texto à direita */
+    flex: 1; /* Cada item ocupa uma fração igual do espaço */
+    white-space: nowrap; /* Impede que o texto quebre para a linha seguinte */
+    overflow: hidden; /* Oculta o texto que ultrapassa o limite */
+    text-overflow: ellipsis; /* Adiciona reticências ao texto que não cabe */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    text-align: left; /* Alinha o texto à esquerda */
+    background-color: #000; /* Cor de fundo preta */
 }
 
 /* Ajuste individual */
-.portfolio-title {
-	max-width: 20%; /* Define a largura máxima como 20% */
+.portfolio-title { 
+    max-width: 25%; /* Limita a largura do título */
+    padding-right: 50px; /* Espaço à direita */
 }
 
-.portfolio-category {
-	max-width: 20%; /* Define a largura máxima como 20% */
+.portfolio-category { 
+    max-width: 22%; /* Limita a largura da categoria */
+    padding-right: 50px; /* Espaço à direita */
 }
 
-.portfolio-excerpt {
-	max-width: 50%; /* Define a largura máxima como 50% */
+.portfolio-excerpt { 
+    max-width: 43%; /* Limita a largura da descrição breve */
+    padding-right: 10px; /* Espaço à direita */
 }
 
-.portfolio-year {
-	max-width: 10%; /* Define a largura máxima como 10% */
+.portfolio-year { 
+    max-width: 10%; /* Limita a largura do ano */
+    text-align: right; /* Alinha o ano à direita */
 }
 
-/* Esconder detalhes por padrão */
+/* Detalhes dos itens (expansível) */
 .portfolio-details {
-	max-height: 0; /* Define a altura máxima como 0 para esconder o conteúdo */
-	overflow: hidden; /* Esconde o conteúdo que ultrapassa o limite */
-	background: #000; /* Fundo sempre preto */
-	transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Transições suaves de altura e opacidade */
+    max-height: 0; /* Inicialmente os detalhes são ocultos */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse o limite */
+    background: #000; /* Cor de fundo preta */
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Transição suave ao expandir */
 }
 
-/* Quando ativo, os detalhes expandem */
+/* Quando o item está ativo, os detalhes expandem */
 .portfolio-item.active .portfolio-details {
-	max-height: 1000px; /* Um valor grande para acomodar qualquer conteúdo */
-	opacity: 1; /* Define a opacidade como 1 */
+    max-height: 1000px; /* Expande a altura para mostrar o conteúdo */
+    opacity: 1; /* Torna o conteúdo visível */
 }
 
-/* Conteúdo detalhado */
+/* Estrutura do conteúdo detalhado */
 .portfolio-detail-content {
-	padding: 10px 0; /* Preenchimento superior e inferior de 10px */
-	display: flex; /* Define um contêiner flexível */
-	gap: 30px; /* Define um espaço de 30px entre os elementos */
+    display: flex; /* Utiliza flexbox para organizar os detalhes */
+    gap: 30px; /* Espaçamento entre os itens */
+    padding: 10px 0; /* Espaçamento interno (topo e fundo) */
 }
 
 /* Imagem do portfólio */
 .portfolio-image {
-	flex: 1; /* Permite que o elemento cresça igualmente */
-	max-width: 40%; /* Define a largura máxima como 40% */
+    flex: 1; /* A imagem ocupa uma fração do espaço */
+    max-width: 40%; /* Limita a largura máxima da imagem */
 }
 
 .portfolio-image img {
-	display: block; /* Define o elemento como um bloco */
-	max-width: 100%; /* Define a largura máxima como 100% */
-	height: auto; /* Ajusta a altura automaticamente */
+    display: block; /* Remove o espaço extra abaixo da imagem */
+    max-width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 /* Texto ao lado da imagem */
 .portfolio-text {
-	flex: 2; /* Permite que o elemento cresça duas vezes mais que os outros */
-	padding: 10px; /* Preenchimento de 10px */
+    flex: 2; /* O texto ocupa o dobro do espaço da imagem */
+    padding: 10px; /* Espaçamento interno */
+    display: flex; /* Alinha o conteúdo em linha */
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+	flex-direction: column; /* Organiza o conteúdo verticalmente */
+}
+
+/* Link "Ler mais" */
+.portfolio-read-more {
+    color: white; /* Cor do texto branca */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: normal; /* Define o peso da fonte como normal */
+    margin-left: 5px; /* Espaço à esquerda */
+}
+
+.portfolio-read-more:hover,
+.portfolio-read-more:focus {
+    color: white; /* Cor do texto ao passar o mouse ou focar */
+    text-decoration: none; /* Remove o sublinhado no hover ou foco */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-	.portfolio-header {
-		justify-content: space-between; /* Distribui o espaço igualmente entre os elementos */
-	}
 
-	.portfolio-title {
-		max-width: 40%; /* Define a largura máxima como 40% */
-	}
+    /* Ajuste da barra de título */
+    .portfolio-header {
+        justify-content: space-between; /* Alinha os itens com mais espaço entre eles */
+    }
 
-	.portfolio-category {
-		max-width: 40%; /* Define a largura máxima como 40% */
-	}
+    /* Ajuste individual dos títulos */
+    .portfolio-title, 
+    .portfolio-header-bar .portfolio-title { 
+        max-width: 45%; /* Aumenta a largura do título em telas pequenas */
+        padding-right: 20px; /* Reduz o espaço à direita */
+    }
 
-	.portfolio-year {
-		max-width: 20%; /* Define a largura máxima como 20% */
-		text-align: right; /* Alinha o texto à direita */
-	}
+    .portfolio-category, 
+    .portfolio-header-bar .portfolio-category { 
+        max-width: 40%; /* Aumenta a largura da categoria */
+        padding-right: 20px; /* Reduz o espaço à direita */
+    }
 
-	/* Ajuste individual dos títulos */
-	.portfolio-header-bar .portfolio-title {
-		max-width: 40%; /* Define a largura máxima como 40% */
-	}
+    .portfolio-year, 
+    .portfolio-header-bar .portfolio-year { 
+        max-width: 15%; /* Aumenta a largura do ano */
+        text-align: right; /* Alinha o ano à direita */
+    }
 
-	.portfolio-header-bar .portfolio-category {
-		max-width: 40%; /* Define a largura máxima como 40% */
-	}
+    /* Esconder a descrição breve na listagem */
+    .portfolio-header-bar .portfolio-excerpt,
+    .portfolio-excerpt {
+        display: none; /* Oculta a descrição breve em dispositivos pequenos */
+    }
 
-	.portfolio-header-bar .portfolio-excerpt {
-		display: none; /* Esconde o elemento */
-	}
+    /* Ajuste da estrutura dos detalhes */
+    .portfolio-detail-content {
+        flex-direction: column; /* Organiza os itens verticalmente */
+        align-items: center; /* Alinha os itens ao centro */
+    }
 
-	.portfolio-header-bar .portfolio-year {
-		max-width: 20%; /* Define a largura máxima como 20% */
-		text-align: right; /* Alinha o texto à direita */
-	}
+    .portfolio-image {
+        max-width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+    }
 
-	.portfolio-excerpt {
-		display: none; /* Esconde o elemento */
-	}
-
-	.portfolio-detail-content {
-		flex-direction: column; /* Organiza os elementos em coluna */
-		align-items: center; /* Alinha os elementos ao centro */
-	}
-
-	.portfolio-image {
-		max-width: 100%; /* Define a largura máxima como 100% */
-	}
-
-	.portfolio-text {
-		padding: 10px; /* Preenchimento de 10px */
-	}
+    .portfolio-text {
+        padding: 10px; /* Espaçamento interno */
+    }
 }
